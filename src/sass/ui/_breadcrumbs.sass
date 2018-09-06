@@ -1,0 +1,18 @@
+.breadcrumbs
+  padding: 25px 0
+  ul
+    display: flex
+    li
+      position: relative
+      &:after
+        content: '>'
+        color: $medium-sulfur
+        font-size: 12px
+        padding: 0 5px
+      &:last-child
+        &:after
+          display: none
+    a
+      font-size: 11px
+      color: $medium-sulfur
+      

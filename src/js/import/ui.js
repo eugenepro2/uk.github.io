@@ -11,4 +11,3 @@ $('[rel="modal:open"]').on('click', function(event) {
   });
   return false;
 });
-

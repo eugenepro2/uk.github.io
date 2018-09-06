@@ -1,0 +1,415 @@
+---
+title: Найти гнездышко
+---
+extends layouts/_layout
+block content
+  .find-apartment
+    include ./partials/_filter
+    .container
+      .find-apartment__content
+        .find-apartment__content__card
+          +breadcrumbs(['Найти гнездышко', 'Квартира', 'На длительный срок', 'Санкт-Петербург', 'Петроградский район', 'Метро Петроградская'])
+          .row
+            .col-xs-6
+              .find-apartment__sorting
+                a(href="#") Сортировать по
+                  i.icon.icon-arrow-down
+            .col-xs-6.end-xs
+              .find-apartment__view
+                a(href="#").active
+                  i.icon.icon-menu
+                a(href="#")
+                  i.icon.icon-burger
+                a(href="#")
+                  i.icon.icon-location
+          .row
+            .col-xs-4
+              .apartaent-card
+                article
+                  header
+                    a(href="#").apartaent-card__heart
+                      i.icon.icon-heart
+                    .swiper-container.swiper-apartaent-card
+                      .swiper-wrapper
+                        .swiper-slide
+                          .swiper-apartaent-card__img
+                            img(src="img/find-apartament/apartaent-card-1.png", alt="")
+                        .swiper-slide
+                          .swiper-apartaent-card__img
+                            img(src="img/find-apartament/apartaent-card-1.png", alt="")
+                        .swiper-slide
+                          .swiper-apartaent-card__img
+                            img(src="img/find-apartament/apartaent-card-1.png", alt="")
+                        .swiper-slide
+                          .swiper-apartaent-card__img
+                            img(src="img/find-apartament/apartaent-card-1.png", alt="")
+                      .swiper-pagination.pagination-apartaent-card
+            .col-xs-8
+              .apartaent-card.apartaent-card--wide
+                article
+                  section
+                    p Сдам 1-комнатную квартиру на длительный срок в Красногвардейском районе
+                    a(href="#").logo
+                      img(src="img/logo-mini.svg", alt="")
+                    .apartaent-card__conditions
+                      p К/У не включены
+                      p Залог
+                    .apartaent-card__price
+                      span 24 000 
+                        i.icon.icon-rub
+                        | /месяц
+                    ul.apartaent-card__people
+                      li
+                        a(href="#")
+                          img(src="img/find-apartament/people-1.png", alt="")
+                      li
+                        a(href="#")
+                          img(src="img/find-apartament/people-1.png", alt="")
+                      li
+                        a(href="#")
+                          img(src="img/find-apartament/people-1.png", alt="")  
+                  footer
+                    .row
+                      .col-xs-6
+                        p 
+                          i.icon.icon-clock
+                          | 40 минут назад
+                      .col-xs-6
+                        span 
+                          i.icon.icon-view
+                          | 152
+          .row
+            .col-xs-4
+              .apartaent-card
+                article
+                  header
+                    a(href="#").apartaent-card__heart
+                      i.icon.icon-heart
+                    .swiper-container.swiper-apartaent-card
+                      .swiper-wrapper
+                        .swiper-slide
+                          .swiper-apartaent-card__img
+                            img(src="img/find-apartament/apartaent-card-1.png", alt="")
+                        .swiper-slide
+                          .swiper-apartaent-card__img
+                            img(src="img/find-apartament/apartaent-card-1.png", alt="")
+                        .swiper-slide
+                          .swiper-apartaent-card__img
+                            img(src="img/find-apartament/apartaent-card-1.png", alt="")
+                        .swiper-slide
+                          .swiper-apartaent-card__img
+                            img(src="img/find-apartament/apartaent-card-1.png", alt="")
+                      .swiper-pagination.pagination-apartaent-card
+                    ul.apartaent-card__people
+                      li
+                        a(href="#")
+                          img(src="img/find-apartament/people-1.png", alt="")
+                      li
+                        a(href="#")
+                          img(src="img/find-apartament/people-1.png", alt="")
+                      li
+                        a(href="#")
+                          img(src="img/find-apartament/people-1.png", alt="")  
+                  section
+                    p Сдам 1-комнатную квартиру на длительный срок в Красногвардейском районе
+                    .apartaent-card__price
+                      span 24 000 
+                        i.icon.icon-rub
+                        | /месяц
+                      .apartaent-card__logo
+                        img(src="img/logo-mini.svg", alt="")
+                  footer
+                    p 
+                      i.icon.icon-clock
+                      | 40 минут назад
+                    span 
+                      i.icon.icon-view
+                      | 152
+            .col-xs-4
+              .apartaent-card
+                article
+                  header
+                    a(href="#").apartaent-card__heart
+                      i.icon.icon-heart
+                    .swiper-container.swiper-apartaent-card
+                      .swiper-wrapper
+                        .swiper-slide
+                          .swiper-apartaent-card__img
+                            img(src="img/find-apartament/apartaent-card-1.png", alt="")
+                        .swiper-slide
+                          .swiper-apartaent-card__img
+                            img(src="img/find-apartament/apartaent-card-1.png", alt="")
+                        .swiper-slide
+                          .swiper-apartaent-card__img
+                            img(src="img/find-apartament/apartaent-card-1.png", alt="")
+                        .swiper-slide
+                          .swiper-apartaent-card__img
+                            img(src="img/find-apartament/apartaent-card-1.png", alt="")
+                      .swiper-pagination.pagination-apartaent-card
+                    ul.apartaent-card__people
+                      li
+                        a(href="#")
+                          img(src="img/find-apartament/people-1.png", alt="")
+                      li
+                        a(href="#")
+                          img(src="img/find-apartament/people-1.png", alt="")
+                  section
+                    p Сдам 1-комнатную квартиру на длительный срок в Красногвардейском районе
+                    .apartaent-card__price
+                      span 24 000 
+                        i.icon.icon-rub
+                        | /месяц
+                      .apartaent-card__logo
+                        img(src="img/logo-mini.svg", alt="")
+                  footer
+                    p 
+                      i.icon.icon-clock
+                      | 40 минут назад
+                    span 
+                      i.icon.icon-view
+                      | 152
+            .col-xs-4
+              .apartaent-card
+                article
+                  header
+                    a(href="#").apartaent-card__heart
+                      i.icon.icon-heart
+                    .swiper-container.swiper-apartaent-card
+                      .swiper-wrapper
+                        .swiper-slide
+                          .swiper-apartaent-card__img
+                            img(src="img/find-apartament/apartaent-card-1.png", alt="")
+                        .swiper-slide
+                          .swiper-apartaent-card__img
+                            img(src="img/find-apartament/apartaent-card-2.png", alt="")
+                        .swiper-slide
+                          .swiper-apartaent-card__img
+                            img(src="img/find-apartament/apartaent-card-3.png", alt="")
+                        .swiper-slide
+                          .swiper-apartaent-card__img
+                            img(src="img/find-apartament/apartaent-card-4.png", alt="")
+                      .swiper-pagination.pagination-apartaent-card
+                    ul.apartaent-card__people
+                      li
+                        a(href="#")
+                          img(src="img/find-apartament/people-1.png", alt="")
+                  section
+                    p Сдам 1-комнатную квартиру на длительный срок в Красногвардейском районе
+                    .apartaent-card__price
+                      span 24 000 
+                        i.icon.icon-rub
+                        | /месяц
+                      .apartaent-card__logo
+                        img(src="img/logo-mini.svg", alt="")
+                  footer
+                    p 
+                      i.icon.icon-clock
+                      | 40 минут назад
+                    span 
+                      i.icon.icon-view
+                      | 152
+            .col-xs-4
+              .apartaent-card
+                article
+                  header
+                    a(href="#").apartaent-card__heart
+                      i.icon.icon-heart
+                    .swiper-container.swiper-apartaent-card
+                      .swiper-wrapper
+                        .swiper-slide
+                          .swiper-apartaent-card__img
+                            img(src="img/find-apartament/apartaent-card-1.png", alt="")
+                        .swiper-slide
+                          .swiper-apartaent-card__img
+                            img(src="img/find-apartament/apartaent-card-1.png", alt="")
+                        .swiper-slide
+                          .swiper-apartaent-card__img
+                            img(src="img/find-apartament/apartaent-card-1.png", alt="")
+                        .swiper-slide
+                          .swiper-apartaent-card__img
+                            img(src="img/find-apartament/apartaent-card-1.png", alt="")
+                      .swiper-pagination.pagination-apartaent-card
+                    ul.apartaent-card__people
+                      li
+                        a(href="#")
+                          img(src="img/find-apartament/people-1.png", alt="")
+                      li
+                        a(href="#")
+                          img(src="img/find-apartament/people-1.png", alt="")
+                      li
+                        a(href="#")
+                          img(src="img/find-apartament/people-1.png", alt="")  
+                  section
+                    p Сдам 1-комнатную квартиру на длительный срок в Красногвардейском районе
+                    .apartaent-card__price
+                      span 24 000 
+                        i.icon.icon-rub
+                        | /месяц
+                      .apartaent-card__logo
+                        img(src="img/logo-mini.svg", alt="")
+                  footer
+                    p 
+                      i.icon.icon-clock
+                      | 40 минут назад
+                    span 
+                      i.icon.icon-view
+                      | 152
+            .col-xs-4
+              .apartaent-card
+                article
+                  header
+                    a(href="#").apartaent-card__heart
+                      i.icon.icon-heart
+                    .swiper-container.swiper-apartaent-card
+                      .swiper-wrapper
+                        .swiper-slide
+                          .swiper-apartaent-card__img
+                            img(src="img/find-apartament/apartaent-card-1.png", alt="")
+                        .swiper-slide
+                          .swiper-apartaent-card__img
+                            img(src="img/find-apartament/apartaent-card-1.png", alt="")
+                        .swiper-slide
+                          .swiper-apartaent-card__img
+                            img(src="img/find-apartament/apartaent-card-1.png", alt="")
+                        .swiper-slide
+                          .swiper-apartaent-card__img
+                            img(src="img/find-apartament/apartaent-card-1.png", alt="")
+                      .swiper-pagination.pagination-apartaent-card
+                    ul.apartaent-card__people
+                      li
+                        a(href="#")
+                          img(src="img/find-apartament/people-1.png", alt="")
+                      li
+                        a(href="#")
+                          img(src="img/find-apartament/people-1.png", alt="")
+                      li
+                        a(href="#")
+                          img(src="img/find-apartament/people-1.png", alt="")  
+                  section
+                    p Сдам 1-комнатную квартиру на длительный срок в Красногвардейском районе
+                    .apartaent-card__price
+                      span 24 000 
+                        i.icon.icon-rub
+                        | /месяц
+                      .apartaent-card__logo
+                        img(src="img/logo-mini.svg", alt="")
+                  footer
+                    p 
+                      i.icon.icon-clock
+                      | 40 минут назад
+                    span 
+                      i.icon.icon-view
+                      | 152
+            .col-xs-4
+              .apartaent-card
+                article
+                  header
+                    a(href="#").apartaent-card__heart
+                      i.icon.icon-heart
+                    .swiper-container.swiper-apartaent-card
+                      .swiper-wrapper
+                        .swiper-slide
+                          .swiper-apartaent-card__img
+                            img(src="img/find-apartament/apartaent-card-1.png", alt="")
+                        .swiper-slide
+                          .swiper-apartaent-card__img
+                            img(src="img/find-apartament/apartaent-card-1.png", alt="")
+                        .swiper-slide
+                          .swiper-apartaent-card__img
+                            img(src="img/find-apartament/apartaent-card-1.png", alt="")
+                        .swiper-slide
+                          .swiper-apartaent-card__img
+                            img(src="img/find-apartament/apartaent-card-1.png", alt="")
+                      .swiper-pagination.pagination-apartaent-card
+                    ul.apartaent-card__people
+                      li
+                        a(href="#")
+                          img(src="img/find-apartament/people-1.png", alt="")
+                      li
+                        a(href="#")
+                          img(src="img/find-apartament/people-1.png", alt="")
+                      li
+                        a(href="#")
+                          img(src="img/find-apartament/people-1.png", alt="")  
+                  section
+                    p Сдам 1-комнатную квартиру на длительный срок в Красногвардейском районе
+                    .apartaent-card__price
+                      span 24 000 
+                        i.icon.icon-rub
+                        | /месяц
+                      .apartaent-card__logo
+                        img(src="img/logo-mini.svg", alt="")
+                  footer
+                    p 
+                      i.icon.icon-clock
+                      | 40 минут назад
+                    span 
+                      i.icon.icon-view
+                      | 152
+            .col-xs-12
+              include ./partials/_pagination
+        aside.aside
+          .apartaent-card 
+            article
+              header
+                .swiper-container.swiper-apartaent-card
+                  .swiper-wrapper
+                    .swiper-slide
+                      .swiper-apartaent-card__text
+                        p Сдаются комнаты в хостеле на Невском проспекте в 5 минутах от дворцовой площади
+                      .swiper-apartaent-card__img
+                        img(src="img/find-apartament/apartaent-card-1.png", alt="")
+                    .swiper-slide
+                      .swiper-apartaent-card__text
+                        p Сдаются комнаты в хостеле на Невском проспекте в 5 минутах от дворцовой площади
+                      .swiper-apartaent-card__img
+                        img(src="img/find-apartament/apartaent-card-1.png", alt="")
+                    .swiper-slide
+                      .swiper-apartaent-card__text
+                        p Сдаются комнаты в хостеле на Невском проспекте в 5 минутах от дворцовой площади
+                      .swiper-apartaent-card__img
+                        img(src="img/find-apartament/apartaent-card-1.png", alt="")
+                    .swiper-slide
+                      .swiper-apartaent-card__text
+                        p Сдаются комнаты в хостеле на Невском проспекте в 5 минутах от дворцовой площади
+                      .swiper-apartaent-card__img
+                        img(src="img/find-apartament/apartaent-card-1.png", alt="")
+                  .swiper-pagination.pagination-apartaent-card
+                ul.apartaent-card__people
+                  li
+                    a(href="#")
+                      img(src="img/find-apartament/people-1.png", alt="")
+              footer
+                p Таким образом постоянное информационно пропагандистское обеспечение нашей деятельности в значительной степени обуславливает создание модели развития.
+          .apartaent-card 
+            article
+              header
+                .swiper-container.swiper-apartaent-card
+                  .swiper-wrapper
+                    .swiper-slide
+                      .swiper-apartaent-card__text
+                        p Сдаются комнаты в хостеле на Невском проспекте в 5 минутах от дворцовой площади
+                      .swiper-apartaent-card__img
+                        img(src="img/find-apartament/apartaent-card-1.png", alt="")
+                    .swiper-slide
+                      .swiper-apartaent-card__text
+                        p Сдаются комнаты в хостеле на Невском проспекте в 5 минутах от дворцовой площади
+                      .swiper-apartaent-card__img
+                        img(src="img/find-apartament/apartaent-card-1.png", alt="")
+                    .swiper-slide
+                      .swiper-apartaent-card__text
+                        p Сдаются комнаты в хостеле на Невском проспекте в 5 минутах от дворцовой площади
+                      .swiper-apartaent-card__img
+                        img(src="img/find-apartament/apartaent-card-1.png", alt="")
+                    .swiper-slide
+                      .swiper-apartaent-card__text
+                        p Сдаются комнаты в хостеле на Невском проспекте в 5 минутах от дворцовой площади
+                      .swiper-apartaent-card__img
+                        img(src="img/find-apartament/apartaent-card-1.png", alt="")
+                  .swiper-pagination.pagination-apartaent-card
+                ul.apartaent-card__people
+                  li
+                    a(href="#")
+                      img(src="img/find-apartament/people-1.png", alt="")
+              footer
+                p Таким образом постоянное информационно пропагандистское обеспечение нашей деятельности в значительной степени обуславливает создание модели развития.

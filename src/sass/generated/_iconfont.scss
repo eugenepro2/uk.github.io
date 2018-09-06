@@ -11,18 +11,19 @@
 
 $icon-arrow-down-shaded: "\EA01";
 $icon-arrow-down: "\EA02";
-$icon-burger: "\EA03";
-$icon-clock: "\EA04";
-$icon-development: "\EA05";
-$icon-heart: "\EA06";
-$icon-location: "\EA07";
-$icon-logo: "\EA08";
-$icon-menu: "\EA09";
-$icon-plus: "\EA0A";
-$icon-rub: "\EA0B";
-$icon-search: "\EA0C";
-$icon-up: "\EA0D";
-$icon-view: "\EA0E";
+$icon-arrow-left: "\EA03";
+$icon-arrow-right: "\EA04";
+$icon-burger: "\EA05";
+$icon-clock: "\EA06";
+$icon-development: "\EA07";
+$icon-heart: "\EA08";
+$icon-location: "\EA09";
+$icon-menu: "\EA0A";
+$icon-plus: "\EA0B";
+$icon-rub: "\EA0C";
+$icon-search: "\EA0D";
+$icon-up: "\EA0E";
+$icon-view: "\EA0F";
 
 
 %icon {
@@ -43,12 +44,13 @@ $icon-view: "\EA0E";
 
 .icon-arrow-down-shaded:before { content: $icon-arrow-down-shaded; }
 .icon-arrow-down:before { content: $icon-arrow-down; }
+.icon-arrow-left:before { content: $icon-arrow-left; }
+.icon-arrow-right:before { content: $icon-arrow-right; }
 .icon-burger:before { content: $icon-burger; }
 .icon-clock:before { content: $icon-clock; }
 .icon-development:before { content: $icon-development; }
 .icon-heart:before { content: $icon-heart; }
 .icon-location:before { content: $icon-location; }
-.icon-logo:before { content: $icon-logo; }
 .icon-menu:before { content: $icon-menu; }
 .icon-plus:before { content: $icon-plus; }
 .icon-rub:before { content: $icon-rub; }
