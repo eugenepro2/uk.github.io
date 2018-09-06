@@ -1,0 +1,60 @@
+.header
+  border-bottom: 1px solid $medium-sulfur
+  display: flex
+  padding: 0 30px
+  justify-content: space-between
+  &__logo
+    padding: 10px 0
+    display: block
+  ul
+    +center
+    li
+      padding-right: 40px
+      &.active
+        a
+          color: $medium-sulfur !important
+    a
+      font-size: 14px
+      font-weight: 500
+      color: $dark-gray
+  &__group
+    display: flex
+    justify-content: space-between
+  &__search
+    padding: 0 30px
+    +center
+    i
+      color: $dark-gray
+      font-size: 18px
+  &__plus
+    display: flex
+    align-items: center
+    justify-content: center
+    border-right: 1px solid $medium-sulfur
+    border-left: 1px solid $medium-sulfur
+    padding: 0 50px
+    color: $red
+    font-size: 14px
+    font-weight: 400
+    i
+      width: 30px
+      height: 30px
+      border-radius: 100%
+      background: $red
+      +center
+      color: $white
+      font-size: 18px
+      margin-right: 10px
+  &__heart
+    display: flex
+    align-items: center
+    justify-content: center
+    border-right: 1px solid $medium-sulfur
+    padding: 0 30px
+    i
+      color: $dark-gray
+      font-size: 18px
+  &__login
+    +center
+    a
+      color: $dark-gray

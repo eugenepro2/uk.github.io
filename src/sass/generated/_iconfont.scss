@@ -9,7 +9,20 @@
   font-style: normal;
 }
 
-$icon-facebook: "\EA01";
+$icon-arrow-down-shaded: "\EA01";
+$icon-arrow-down: "\EA02";
+$icon-burger: "\EA03";
+$icon-clock: "\EA04";
+$icon-development: "\EA05";
+$icon-heart: "\EA06";
+$icon-location: "\EA07";
+$icon-logo: "\EA08";
+$icon-menu: "\EA09";
+$icon-plus: "\EA0A";
+$icon-rub: "\EA0B";
+$icon-search: "\EA0C";
+$icon-up: "\EA0D";
+$icon-view: "\EA0E";
 
 
 %icon {
@@ -28,4 +41,17 @@ $icon-facebook: "\EA01";
   display: inline-block;
 }
 
-.icon-facebook:before { content: $icon-facebook; }
+.icon-arrow-down-shaded:before { content: $icon-arrow-down-shaded; }
+.icon-arrow-down:before { content: $icon-arrow-down; }
+.icon-burger:before { content: $icon-burger; }
+.icon-clock:before { content: $icon-clock; }
+.icon-development:before { content: $icon-development; }
+.icon-heart:before { content: $icon-heart; }
+.icon-location:before { content: $icon-location; }
+.icon-logo:before { content: $icon-logo; }
+.icon-menu:before { content: $icon-menu; }
+.icon-plus:before { content: $icon-plus; }
+.icon-rub:before { content: $icon-rub; }
+.icon-search:before { content: $icon-search; }
+.icon-up:before { content: $icon-up; }
+.icon-view:before { content: $icon-view; }

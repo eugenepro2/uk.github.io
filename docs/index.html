@@ -7,14 +7,79 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#fff">
     <meta name="format-detection" content="telephone=no">
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900" rel="stylesheet">
     <link rel="stylesheet" media="all" href="css/app.css">
   </head>
   <body>
     <!--BEGIN out-->
     <div class="out">
       <!--BEGIN header-->
-      <header class="header"></header>
+      <header class="header"><a href="#" class="header__logo"><img src="img/logo.svg" alt=""></a>
+        <ul>
+          <li class="active"><a href="#">Найти гнездышко</a></li>
+          <li><a href="#">Найти гнездоискателя</a></li>
+          <li><a href="#">Найти гнездососеда</a></li>
+          <li><a href="#">Черный список</a></li>
+        </ul>
+        <div class="header__group">
+          <div class="header__search"><a href="#"><i class="icon icon-search"></i></a></div><a href="#" class="header__plus"><i class="icon icon-plus"></i>Создать объявление</a>
+          <div class="header__heart"><a href="#"><i class="icon icon-heart"></i></a></div>
+        </div>
+        <div class="header__login"><a href="#">Войти</a></div>
+      </header>
       <!--END header-->
+      <section class="intro">
+        <h1>Все страницы</h1>
+        <ul>
+          <li><a href="catalog.html">Каталог</a></li>
+          <li><a href="#">Объявления</a></li>
+        </ul>
+      </section>
+      <footer class="footer">
+        <div class="footer__top">
+          <div class="container">
+            <div class="row">
+              <div class="col-xs-2">
+                <ul class="footer__nav">
+                  <li><a href="#">Найти гнездышко</a></li>
+                  <li><a href="#">Найти гнездоискателя</a></li>
+                  <li><a href="#">Найти гнездососеда</a></li>
+                </ul>
+              </div>
+              <div class="col-xs-2">
+                <ul class="footer__nav">
+                  <li><a href="#">Вопросы и ответы</a></li>
+                  <li><a href="#">Черный список</a></li>
+                  <li><a href="#">Реклама</a></li>
+                </ul>
+              </div>
+              <div class="col-xs-2">
+                <ul class="footer__nav">
+                  <li><a href="#">Отзывы о сервисе</a></li>
+                  <li><a href="#">Правила сервиса</a></li>
+                  <li><a href="#">Модераторы в работе</a></li>
+                </ul>
+              </div>
+              <div class="col-xs-5 center-xs">
+                <ul class="footer__social">
+                  <li><a href="#"><img src="img/telegram.svg" alt=""></a></li>
+                  <li><a href="#"><img src="img/youtube.svg" alt=""></a></li>
+                  <li><a href="#"><img src="img/vk.svg" alt=""></a></li>
+                  <li><a href="#"><img src="img/facebook.svg" alt=""></a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="footer__bottom">
+          <div class="container">
+            <div class="row">
+              <div class="col-xs-6"><a href="#">Политика обработки персональных данных</a><a href="#">Типовой договор аренды</a></div>
+              <div class="col-xs-6"><a href="#" class="footer__development">Разработка сервиса<i class="icon icon-development"></i></a></div>
+            </div>
+          </div>
+        </div>
+      </footer>
     </div>
     <!--END out-->
     <!--LOAD SCRIPTS-->
