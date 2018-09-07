@@ -1,0 +1,29 @@
+.selectize-control
+  width: 100%
+  height: 100%
+.selectize-input
+  box-shadow: none
+  height: 100%
+  border: none
+  +center 
+  display: flex !important
+  justify-content: flex-start
+  input
+      display: none !important
+.selectize-input>*
+  width: 100%
+  max-width: 70px
+.selectize-control.single .selectize-input:after
+  content: $icon-arrow-down !important
+  font-family: "iconfont"
+  border: none !important
+  font-size: 8px
+  right: 25px
+  margin-top: 0 !important
+  height: 6px
+  transform: translate(0, -50%)
+  width: 10px
+  top: 46%
+  +tr
+.selectize-control.single .selectize-input.dropdown-active:after
+  transform: rotate(180deg) translate(0, -50%)

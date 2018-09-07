@@ -1,10 +1,357 @@
 .filter
   .container
     form
-      .row
-        .col-xs-12
-          .filter__time
-            input(type="radio" name="duration" id="duration-1" checked)
-            label(for="duration-1") На длительный срок
-            input(type="radio" name="duration" id="duration-2")
-            label(for="duration-2") На сутки
+      .filter__options
+        .filter__options__visible
+          .row
+            .col-xs-12
+              .filter__radio.filter__time
+                input(type="radio" name="duration" id="duration-1" checked)
+                label(for="duration-1") На длительный срок
+                input(type="radio" name="duration" id="duration-2")
+                label(for="duration-2") На сутки
+              a(href="#search__history" rel="modal:open").filter__history История поиска
+            .col-xs-12
+              .filter__container
+                .filter__block.filter__block__citi
+                  input(type="text" name="citi" id="citi" placeholder="Город")
+                  label(for="citi")
+                    i.icon.icon-location
+                .filter__block
+                  a(href="#").apartment__btn
+                    span Квартира
+                    i.icon.icon-arrow-down
+                  .filter__block__options
+                    .filter__block__options__radio
+                      input(type="radio" name="apartment2" id="apartment2-1" checked)
+                      label(for="apartment2-1" value="Квартира" rel=".filter__lodging__flat") Квартира
+                      input(type="radio" name="apartment2" id="apartment2-2")
+                      label(for="apartment2-2" value="Комната" rel=".filter__lodging__room") Комната
+                      input(type="radio" name="apartment2" id="apartment2-3")
+                      label(for="apartment2-3" value="Дом" rel=".filter__lodging__house") Дом
+                    .row
+                      .col-xs-6
+                        .filter__block__options__checkbox
+                          input(type="checkbox" id="room-1")
+                          label(for="room-1") 1 комната
+                          input(type="checkbox" id="room-2")
+                          label(for="room-2") 2 комнаты
+                          input(type="checkbox" id="room-3")
+                          label(for="room-3") 3 комнаты
+                          input(type="checkbox" id="room-4" checked)
+                          label(for="room-4") 4 комнаты
+                      .col-xs-6
+                        .filter__block__options__checkbox
+                          input(type="checkbox" id="room-5")
+                          label(for="room-5") 5 комнат
+                          input(type="checkbox" id="room-6")
+                          label(for="room-6") 6 комнат
+                          input(type="checkbox" id="room-7")
+                          label(for="room-7") более 6 комнат
+                .filter__block
+                  p Цена
+                  input(type="number" name="pirce-from" placeholder="от")
+                  input(type="number" name="pirce-up" placeholder="до")
+                  i.icon.icon-rub
+                .filter__block.filter__block__metro
+                  input(type="text" name="metro" placeholder="Метро")
+                  input(type="text" name="district" placeholder="Район")
+        .filter__options__hidden
+          .row
+            .col-xs-4
+              .filter__radio
+                input(type="radio" name="utilities" id="utilities-1" checked)
+                label(for="utilities-1") К/У  не включены
+                input(type="radio" name="utilities" id="utilities-2")
+                label(for="utilities-2") К/У включены
+            .col-xs-7.col-xs-offset-1.end-xs
+              .filter__radio.filter__radio--min
+                input(type="radio" name="pledge" id="pledge-1" checked)
+                label(for="pledge-1") Любой залог
+                input(type="radio" name="pledge" id="pledge-2")
+                label(for="pledge-2") 100%
+                input(type="radio" name="pledge" id="pledge-3" checked)
+                label(for="pledge-3") 50%
+                input(type="radio" name="pledge" id="pledge-4")
+                label(for="pledge-4") Разбиваемый
+                input(type="radio" name="pledge" id="pledge-5")
+                label(for="pledge-5") Без залога
+          .filter__container
+            .filter__block
+              p Площадь комнаты
+              input(type="number" placeholder="от")
+              input(type="number" placeholder="до")
+              span м2
+            .filter__block
+              p Площадь квартиры
+              input(type="number" placeholder="от")
+              input(type="number" placeholder="до")
+              span м2
+            .filter__block
+              p Площадь кухни
+              input(type="number" placeholder="от")
+              input(type="number" placeholder="до")
+              span м2
+            .filter__block.filter__block__metro
+              select
+                option(value="1") Высота потолков
+                option(value="2") Высота потолков1
+                option(value="3") Высота потолков2
+                option(value="4") Высота потолков3
+          .filter__container
+            .filter__block.filter__block__metro
+              select
+                option(value="1") Тип дома
+                option(value="2") Тип дома1
+                option(value="3") Тип дома2
+                option(value="4") Тип дома3
+            .filter__block
+              p Площадь комнаты
+              input(type="number" placeholder="от")
+              input(type="number" placeholder="до")
+              span м2
+            .filter__block
+              p Площадь квартиры
+              input(type="number" placeholder="от")
+              input(type="number" placeholder="до")
+              span м2
+            .filter__block
+              p Площадь кухни
+              input(type="number" placeholder="от")
+              input(type="number" placeholder="до")
+              span м2
+          .filter__container.filter__container--select
+            .filter__block.filter__block__metro
+              select
+                option(value="1") Комнат в квартире
+                option(value="2") Комнат в квартире1
+                option(value="3") Комнат в квартире2
+                option(value="4") Комнат в квартире3
+            .filter__block.filter__block__metro
+              select
+                option(value="1") Парковка
+                option(value="2") Парковка1
+                option(value="3") Парковка2
+                option(value="4") Парковка3
+          .filter__radio
+            input(type="radio" name="bathroom" id="bathroom-1" checked)
+            label(for="bathroom-1") Любой санузел
+            input(type="radio" name="bathroom" id="bathroom-2")
+            label(for="bathroom-2") Раздельный 
+            input(type="radio" name="bathroom" id="bathroom-3")
+            label(for="bathroom-3") Совмещенный
+          .filter__lodging__flat.filter__lodging__block
+            .filter__checkbox
+              .filter__checkbox__block
+                input(type="checkbox" id="conditions1")
+                label(for="conditions1") Пандус
+              .filter__checkbox__block
+                input(type="checkbox" id="conditions2")
+                label(for="conditions2") Балкон
+                input(type="checkbox" id="conditions3")
+                label(for="conditions3") Лоджия
+                input(type="checkbox" id="conditions4" checked)
+                label(for="conditions4") Эркер
+                input(type="checkbox" id="conditions5")
+                label(for="conditions5") Терраса
+              .filter__checkbox__block
+                input(type="checkbox" id="conditions6")
+                label(for="conditions6") Грузовой лифт
+                input(type="checkbox" id="conditions7")
+                label(for="conditions7") Пассажирский лифт
+              .filter__checkbox__block
+                input(type="checkbox" id="conditions8")
+                label(for="conditions8") С мусоропроводом
+                input(type="checkbox" id="conditions9")
+                label(for="conditions9") Без мусоропровода
+              .filter__checkbox__block
+                input(type="checkbox" id="conditions10" checked)
+                label(for="conditions10") Камин
+              .filter__checkbox__block
+                input(type="checkbox" id="conditions11")
+                label(for="conditions11") Интернет
+              .filter__checkbox__block
+                input(type="checkbox" id="conditions12")
+                label(for="conditions12") Видеонаблюдение
+              .filter__checkbox__block
+                input(type="checkbox" id="conditions13")
+                label(for="conditions13") Кабельное ТВ
+                input(type="checkbox" id="conditions14")
+                label(for="conditions14") Спутниковое ТВ
+              .filter__checkbox__block
+                input(type="checkbox" id="conditions15")
+                label(for="conditions15") Консьерж
+              .filter__checkbox__block
+                input(type="checkbox" id="conditions16")
+                label(for="conditions16") Домофон
+          .filter__lodging__room.filter__lodging__block
+            .filter__checkbox
+              .filter__checkbox__block
+                input(type="checkbox" id="conditions1")
+                label(for="conditions1") Пандус
+              .filter__checkbox__block
+                input(type="checkbox" id="conditions2")
+                label(for="conditions2") Балкон
+                input(type="checkbox" id="conditions3")
+                label(for="conditions3") Лоджия
+                input(type="checkbox" id="conditions4" checked)
+                label(for="conditions4") Эркер
+                input(type="checkbox" id="conditions5")
+                label(for="conditions5") Терраса
+              .filter__checkbox__block
+                input(type="checkbox" id="conditions6")
+                label(for="conditions6") Грузовой лифт
+                input(type="checkbox" id="conditions7")
+                label(for="conditions7") Пассажирский лифт
+              .filter__checkbox__block
+                input(type="checkbox" id="conditions8")
+                label(for="conditions8") С мусоропроводом
+                input(type="checkbox" id="conditions9")
+                label(for="conditions9") Без мусоропровода
+              .filter__checkbox__block
+                input(type="checkbox" id="conditions10" checked)
+                label(for="conditions10") Камин
+              .filter__checkbox__block
+                input(type="checkbox" id="conditions11")
+                label(for="conditions11") Интернет
+              .filter__checkbox__block
+                input(type="checkbox" id="conditions12")
+                label(for="conditions12") Видеонаблюдение
+              .filter__checkbox__block
+                input(type="checkbox" id="conditions13")
+                label(for="conditions13") Кабельное ТВ
+                input(type="checkbox" id="conditions14")
+                label(for="conditions14") Спутниковое ТВ
+              .filter__checkbox__block
+                input(type="checkbox" id="conditions15")
+                label(for="conditions15") Консьерж
+              .filter__checkbox__block
+                input(type="checkbox" id="conditions16")
+                label(for="conditions16") Домофон
+          .filter__lodging__house.filter__lodging__block
+            .filter__checkbox
+              .filter__checkbox__block
+                input(type="checkbox" id="conditions1")
+                label(for="conditions1") Пандус
+              .filter__checkbox__block
+                input(type="checkbox" id="conditions2")
+                label(for="conditions2") Балкон
+                input(type="checkbox" id="conditions3")
+                label(for="conditions3") Лоджия
+                input(type="checkbox" id="conditions4" checked)
+                label(for="conditions4") Эркер
+                input(type="checkbox" id="conditions5")
+                label(for="conditions5") Терраса
+              .filter__checkbox__block
+                input(type="checkbox" id="conditions17")
+                label(for="conditions17") Сауна
+                input(type="checkbox" id="conditions18")
+                label(for="conditions18") Баня
+              .filter__checkbox__block
+                input(type="checkbox" id="conditions10" checked)
+                label(for="conditions10") Камин
+              .filter__checkbox__block
+                input(type="checkbox" id="conditions16")
+                label(for="conditions16") Домофон
+              .filter__checkbox__block
+                input(type="checkbox" id="conditions11")
+                label(for="conditions11") Интернет
+              .filter__checkbox__block
+                input(type="checkbox" id="conditions13")
+                label(for="conditions13") Кабельное ТВ
+                input(type="checkbox" id="conditions14")
+                label(for="conditions14") Спутниковое ТВ
+          .filter__furniture
+            .filter__radio
+              input(type="radio" name="furniture" id="furniture-1" checked)
+              label(for="furniture-1") Мебелированная
+              input(type="radio" name="furniture" id="furniture-2")
+              label(for="furniture-2") Без мебели
+              input(type="radio" name="furniture" id="furniture-3")
+              label(for="furniture-3") Любая мебелировка
+            .filter__furniture__checkbox
+              input(type="checkbox" id="couch")
+              label(for="couch")
+                span Диван
+                i.icon.icon-couch
+              input(type="checkbox" id="armchair")
+              label(for="armchair")
+                span Кресло
+                i.icon.icon-armchair
+              input(type="checkbox" id="tv")
+              label(for="tv")
+                span Телевизор
+                i.icon.icon-tv
+              input(type="checkbox" id="stove" checked)
+              label(for="stove")
+                span Кухонная плита
+                i.icon.icon-stove
+              input(type="checkbox" id="iron")
+              label(for="iron")
+                span Утюг
+                i.icon.icon-iron.iron-min
+              input(type="checkbox" id="toilet")
+              label(for="toilet")
+                span Унитаз
+                i.icon.icon-toilet.min-icon
+            .filter__furniture__checkbox
+              input(type="checkbox" id="bed")
+              label(for="bed")
+                span Кровать (двуспальная)
+                i.icon.icon-bed
+              input(type="checkbox" id="table")
+              label(for="table")
+                span Стол
+                i.icon.icon-table
+              input(type="checkbox" id="hairdryer")
+              label(for="hairdryer")
+                span Фен
+                i.icon.icon-hairdryer
+              input(type="checkbox" id="refrigerator" checked)
+              label(for="refrigerator")
+                span Холодильник
+                i.icon.icon-refrigerator.min-icon
+              input(type="checkbox" id="ironing-board")
+              label(for="ironing-board")
+                span Гладильная доска
+                i.icon.icon-ironing-board.min-icon
+              input(type="checkbox" id="bath")
+              label(for="bath")
+                span Ванна
+                i.icon.icon-bath.iron-min
+            .filter__furniture__checkbox
+              input(type="checkbox" id="cupboard")
+              label(for="cupboard")
+                span Шкаф
+                i.icon.icon-cupboard.min-icon
+              input(type="checkbox" id="chair")
+              label(for="chair")
+                span Стулья
+                i.icon.icon-chair.min-icon
+              input(type="checkbox" id="microwave")
+              label(for="microwave")
+                span Микроволновая печь
+                i.icon.icon-microwave
+              input(type="checkbox" id="kettle" checked)
+              label(for="kettle")
+                span Чайник
+                i.icon.icon-kettle
+              input(type="checkbox" id="washer")
+              label(for="washer")
+                span Стиральная машина
+                i.icon.icon-washer.min-icon
+              input(type="checkbox" id="douche")
+              label(for="douche")
+                span Душевая кабина
+                i.icon.icon-douche.min-icon
+            .filter__furniture__all
+              a(href="#")
+                i.icon.icon-all
+                p Еще
+      .filter__btn
+        .filter__btn__options
+          a(href="#") 
+            i.icon.icon-arrow-down-shaded
+            | Параметры поиска
+          p Найдено: 136 вариантов
+        input(type="submit" value="Показать объявления").btn.btn-primary

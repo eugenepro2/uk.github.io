@@ -22,7 +22,7 @@
           <li><a href="#">Черный список</a></li>
         </ul>
         <div class="header__group">
-          <div class="header__search"><a href="#"><i class="icon icon-search"></i></a></div><a href="#" class="header__plus"><i class="icon icon-plus"></i>Создать объявление</a>
+          <div class="header__search"><a href="#"><i class="icon icon-search"></i><i class="icon icon-close"></i></a><input type="text" placeholder="Поиск..." id="search"></div><a href="#" class="header__plus"><i class="icon icon-plus"></i>Создать объявление</a>
           <div class="header__heart"><a href="#"><i class="icon icon-heart"></i></a></div>
         </div>
         <div class="header__login"><a href="#">Войти</a></div>
@@ -32,10 +32,148 @@
         <div class="filter">
           <div class="container">
             <form>
-              <div class="row">
-                <div class="col-xs-12">
-                  <div class="filter__time"><input type="radio" name="duration" id="duration-1" checked><label for="duration-1">На длительный срок</label><input type="radio" name="duration" id="duration-2"><label for="duration-2">На сутки</label></div>
+              <div class="filter__options">
+                <div class="filter__options__visible">
+                  <div class="row">
+                    <div class="col-xs-12">
+                      <div class="filter__radio filter__time"><input type="radio" name="duration" id="duration-1" checked><label for="duration-1">На длительный срок</label><input type="radio" name="duration" id="duration-2"><label for="duration-2">На сутки</label></div><a href="#search__history" rel="modal:open" class="filter__history">История поиска</a>
+                    </div>
+                    <div class="col-xs-12">
+                      <div class="filter__container">
+                        <div class="filter__block filter__block__citi"><input type="text" name="citi" id="citi" placeholder="Город"><label for="citi"><i class="icon icon-location"></i></label></div>
+                        <div class="filter__block"><a href="#" class="apartment__btn"><span>Квартира</span><i class="icon icon-arrow-down"></i></a>
+                          <div class="filter__block__options">
+                            <div class="filter__block__options__radio"><input type="radio" name="apartment2" id="apartment2-1" checked><label for="apartment2-1" value="Квартира" rel=".filter__lodging__flat">Квартира</label><input type="radio" name="apartment2" id="apartment2-2"><label for="apartment2-2" value="Комната" rel=".filter__lodging__room">Комната</label><input type="radio" name="apartment2" id="apartment2-3"><label for="apartment2-3" value="Дом" rel=".filter__lodging__house">Дом</label></div>
+                            <div class="row">
+                              <div class="col-xs-6">
+                                <div class="filter__block__options__checkbox"><input type="checkbox" id="room-1"><label for="room-1">1 комната</label><input type="checkbox" id="room-2"><label for="room-2">2 комнаты</label><input type="checkbox" id="room-3"><label for="room-3">3 комнаты</label><input type="checkbox" id="room-4" checked><label for="room-4">4 комнаты</label></div>
+                              </div>
+                              <div class="col-xs-6">
+                                <div class="filter__block__options__checkbox"><input type="checkbox" id="room-5"><label for="room-5">5 комнат</label><input type="checkbox" id="room-6"><label for="room-6">6 комнат</label><input type="checkbox" id="room-7"><label for="room-7">более 6 комнат</label></div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="filter__block">
+                          <p>Цена</p><input type="number" name="pirce-from" placeholder="от"><input type="number" name="pirce-up" placeholder="до"><i class="icon icon-rub"></i>
+                        </div>
+                        <div class="filter__block filter__block__metro"><input type="text" name="metro" placeholder="Метро"><input type="text" name="district" placeholder="Район"></div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
+                <div class="filter__options__hidden">
+                  <div class="row">
+                    <div class="col-xs-4">
+                      <div class="filter__radio"><input type="radio" name="utilities" id="utilities-1" checked><label for="utilities-1">К/У не включены</label><input type="radio" name="utilities" id="utilities-2"><label for="utilities-2">К/У включены</label></div>
+                    </div>
+                    <div class="col-xs-7 col-xs-offset-1 end-xs">
+                      <div class="filter__radio filter__radio--min"><input type="radio" name="pledge" id="pledge-1" checked><label for="pledge-1">Любой залог</label><input type="radio" name="pledge" id="pledge-2"><label for="pledge-2">100%</label><input type="radio" name="pledge" id="pledge-3" checked><label for="pledge-3">50%</label><input type="radio" name="pledge" id="pledge-4"><label for="pledge-4">Разбиваемый</label><input type="radio" name="pledge" id="pledge-5"><label for="pledge-5">Без залога</label></div>
+                    </div>
+                  </div>
+                  <div class="filter__container">
+                    <div class="filter__block">
+                      <p>Площадь комнаты</p><input type="number" placeholder="от"><input type="number" placeholder="до"><span>м2</span>
+                    </div>
+                    <div class="filter__block">
+                      <p>Площадь квартиры</p><input type="number" placeholder="от"><input type="number" placeholder="до"><span>м2</span>
+                    </div>
+                    <div class="filter__block">
+                      <p>Площадь кухни</p><input type="number" placeholder="от"><input type="number" placeholder="до"><span>м2</span>
+                    </div>
+                    <div class="filter__block filter__block__metro"><select>
+                        <option value="1">Высота потолков</option>
+                        <option value="2">Высота потолков1</option>
+                        <option value="3">Высота потолков2</option>
+                        <option value="4">Высота потолков3</option>
+                      </select></div>
+                  </div>
+                  <div class="filter__container">
+                    <div class="filter__block filter__block__metro"><select>
+                        <option value="1">Тип дома</option>
+                        <option value="2">Тип дома1</option>
+                        <option value="3">Тип дома2</option>
+                        <option value="4">Тип дома3</option>
+                      </select></div>
+                    <div class="filter__block">
+                      <p>Площадь комнаты</p><input type="number" placeholder="от"><input type="number" placeholder="до"><span>м2</span>
+                    </div>
+                    <div class="filter__block">
+                      <p>Площадь квартиры</p><input type="number" placeholder="от"><input type="number" placeholder="до"><span>м2</span>
+                    </div>
+                    <div class="filter__block">
+                      <p>Площадь кухни</p><input type="number" placeholder="от"><input type="number" placeholder="до"><span>м2</span>
+                    </div>
+                  </div>
+                  <div class="filter__container filter__container--select">
+                    <div class="filter__block filter__block__metro"><select>
+                        <option value="1">Комнат в квартире</option>
+                        <option value="2">Комнат в квартире1</option>
+                        <option value="3">Комнат в квартире2</option>
+                        <option value="4">Комнат в квартире3</option>
+                      </select></div>
+                    <div class="filter__block filter__block__metro"><select>
+                        <option value="1">Парковка</option>
+                        <option value="2">Парковка1</option>
+                        <option value="3">Парковка2</option>
+                        <option value="4">Парковка3</option>
+                      </select></div>
+                  </div>
+                  <div class="filter__radio"><input type="radio" name="bathroom" id="bathroom-1" checked><label for="bathroom-1">Любой санузел</label><input type="radio" name="bathroom" id="bathroom-2"><label for="bathroom-2">Раздельный </label><input type="radio" name="bathroom" id="bathroom-3"><label for="bathroom-3">Совмещенный</label></div>
+                  <div class="filter__lodging__flat filter__lodging__block">
+                    <div class="filter__checkbox">
+                      <div class="filter__checkbox__block"><input type="checkbox" id="conditions1"><label for="conditions1">Пандус</label></div>
+                      <div class="filter__checkbox__block"><input type="checkbox" id="conditions2"><label for="conditions2">Балкон</label><input type="checkbox" id="conditions3"><label for="conditions3">Лоджия</label><input type="checkbox" id="conditions4" checked><label for="conditions4">Эркер</label><input type="checkbox" id="conditions5"><label for="conditions5">Терраса</label></div>
+                      <div class="filter__checkbox__block"><input type="checkbox" id="conditions6"><label for="conditions6">Грузовой лифт</label><input type="checkbox" id="conditions7"><label for="conditions7">Пассажирский лифт</label></div>
+                      <div class="filter__checkbox__block"><input type="checkbox" id="conditions8"><label for="conditions8">С мусоропроводом</label><input type="checkbox" id="conditions9"><label for="conditions9">Без мусоропровода</label></div>
+                      <div class="filter__checkbox__block"><input type="checkbox" id="conditions10" checked><label for="conditions10">Камин</label></div>
+                      <div class="filter__checkbox__block"><input type="checkbox" id="conditions11"><label for="conditions11">Интернет</label></div>
+                      <div class="filter__checkbox__block"><input type="checkbox" id="conditions12"><label for="conditions12">Видеонаблюдение</label></div>
+                      <div class="filter__checkbox__block"><input type="checkbox" id="conditions13"><label for="conditions13">Кабельное ТВ</label><input type="checkbox" id="conditions14"><label for="conditions14">Спутниковое ТВ</label></div>
+                      <div class="filter__checkbox__block"><input type="checkbox" id="conditions15"><label for="conditions15">Консьерж</label></div>
+                      <div class="filter__checkbox__block"><input type="checkbox" id="conditions16"><label for="conditions16">Домофон</label></div>
+                    </div>
+                  </div>
+                  <div class="filter__lodging__room filter__lodging__block">
+                    <div class="filter__checkbox">
+                      <div class="filter__checkbox__block"><input type="checkbox" id="conditions1"><label for="conditions1">Пандус</label></div>
+                      <div class="filter__checkbox__block"><input type="checkbox" id="conditions2"><label for="conditions2">Балкон</label><input type="checkbox" id="conditions3"><label for="conditions3">Лоджия</label><input type="checkbox" id="conditions4" checked><label for="conditions4">Эркер</label><input type="checkbox" id="conditions5"><label for="conditions5">Терраса</label></div>
+                      <div class="filter__checkbox__block"><input type="checkbox" id="conditions6"><label for="conditions6">Грузовой лифт</label><input type="checkbox" id="conditions7"><label for="conditions7">Пассажирский лифт</label></div>
+                      <div class="filter__checkbox__block"><input type="checkbox" id="conditions8"><label for="conditions8">С мусоропроводом</label><input type="checkbox" id="conditions9"><label for="conditions9">Без мусоропровода</label></div>
+                      <div class="filter__checkbox__block"><input type="checkbox" id="conditions10" checked><label for="conditions10">Камин</label></div>
+                      <div class="filter__checkbox__block"><input type="checkbox" id="conditions11"><label for="conditions11">Интернет</label></div>
+                      <div class="filter__checkbox__block"><input type="checkbox" id="conditions12"><label for="conditions12">Видеонаблюдение</label></div>
+                      <div class="filter__checkbox__block"><input type="checkbox" id="conditions13"><label for="conditions13">Кабельное ТВ</label><input type="checkbox" id="conditions14"><label for="conditions14">Спутниковое ТВ</label></div>
+                      <div class="filter__checkbox__block"><input type="checkbox" id="conditions15"><label for="conditions15">Консьерж</label></div>
+                      <div class="filter__checkbox__block"><input type="checkbox" id="conditions16"><label for="conditions16">Домофон</label></div>
+                    </div>
+                  </div>
+                  <div class="filter__lodging__house filter__lodging__block">
+                    <div class="filter__checkbox">
+                      <div class="filter__checkbox__block"><input type="checkbox" id="conditions1"><label for="conditions1">Пандус</label></div>
+                      <div class="filter__checkbox__block"><input type="checkbox" id="conditions2"><label for="conditions2">Балкон</label><input type="checkbox" id="conditions3"><label for="conditions3">Лоджия</label><input type="checkbox" id="conditions4" checked><label for="conditions4">Эркер</label><input type="checkbox" id="conditions5"><label for="conditions5">Терраса</label></div>
+                      <div class="filter__checkbox__block"><input type="checkbox" id="conditions17"><label for="conditions17">Сауна</label><input type="checkbox" id="conditions18"><label for="conditions18">Баня</label></div>
+                      <div class="filter__checkbox__block"><input type="checkbox" id="conditions10" checked><label for="conditions10">Камин</label></div>
+                      <div class="filter__checkbox__block"><input type="checkbox" id="conditions16"><label for="conditions16">Домофон</label></div>
+                      <div class="filter__checkbox__block"><input type="checkbox" id="conditions11"><label for="conditions11">Интернет</label></div>
+                      <div class="filter__checkbox__block"><input type="checkbox" id="conditions13"><label for="conditions13">Кабельное ТВ</label><input type="checkbox" id="conditions14"><label for="conditions14">Спутниковое ТВ</label></div>
+                    </div>
+                  </div>
+                  <div class="filter__furniture">
+                    <div class="filter__radio"><input type="radio" name="furniture" id="furniture-1" checked><label for="furniture-1">Мебелированная</label><input type="radio" name="furniture" id="furniture-2"><label for="furniture-2">Без мебели</label><input type="radio" name="furniture" id="furniture-3"><label for="furniture-3">Любая мебелировка</label></div>
+                    <div class="filter__furniture__checkbox"><input type="checkbox" id="couch"><label for="couch"><span>Диван</span><i class="icon icon-couch"></i></label><input type="checkbox" id="armchair"><label for="armchair"><span>Кресло</span><i class="icon icon-armchair"></i></label><input type="checkbox" id="tv"><label for="tv"><span>Телевизор</span><i class="icon icon-tv"></i></label><input type="checkbox" id="stove" checked><label for="stove"><span>Кухонная плита</span><i class="icon icon-stove"></i></label><input type="checkbox" id="iron"><label for="iron"><span>Утюг</span><i class="icon icon-iron iron-min"></i></label><input type="checkbox" id="toilet"><label for="toilet"><span>Унитаз</span><i class="icon icon-toilet min-icon"></i></label></div>
+                    <div class="filter__furniture__checkbox"><input type="checkbox" id="bed"><label for="bed"><span>Кровать (двуспальная)</span><i class="icon icon-bed"></i></label><input type="checkbox" id="table"><label for="table"><span>Стол</span><i class="icon icon-table"></i></label><input type="checkbox" id="hairdryer"><label for="hairdryer"><span>Фен</span><i class="icon icon-hairdryer"></i></label><input type="checkbox" id="refrigerator" checked><label for="refrigerator"><span>Холодильник</span><i class="icon icon-refrigerator min-icon"></i></label><input type="checkbox" id="ironing-board"><label for="ironing-board"><span>Гладильная доска</span><i class="icon icon-ironing-board min-icon"></i></label><input type="checkbox" id="bath"><label for="bath"><span>Ванна</span><i class="icon icon-bath iron-min"></i></label></div>
+                    <div class="filter__furniture__checkbox"><input type="checkbox" id="cupboard"><label for="cupboard"><span>Шкаф</span><i class="icon icon-cupboard min-icon"></i></label><input type="checkbox" id="chair"><label for="chair"><span>Стулья</span><i class="icon icon-chair min-icon"></i></label><input type="checkbox" id="microwave"><label for="microwave"><span>Микроволновая печь</span><i class="icon icon-microwave"></i></label><input type="checkbox" id="kettle" checked><label for="kettle"><span>Чайник</span><i class="icon icon-kettle"></i></label><input type="checkbox" id="washer"><label for="washer"><span>Стиральная машина</span><i class="icon icon-washer min-icon"></i></label><input type="checkbox" id="douche"><label for="douche"><span>Душевая кабина</span><i class="icon icon-douche min-icon"></i></label></div>
+                    <div class="filter__furniture__all"><a href="#"><i class="icon icon-all"></i>
+                        <p>Еще</p>
+                      </a></div>
+                  </div>
+                </div>
+              </div>
+              <div class="filter__btn">
+                <div class="filter__btn__options"><a href="#"> <i class="icon icon-arrow-down-shaded"></i>Параметры поиска</a>
+                  <p>Найдено: 136 вариантов</p>
+                </div><input type="submit" value="Показать объявления" class="btn btn-primary">
               </div>
             </form>
           </div>
@@ -115,7 +253,7 @@
                   </div>
                 </div>
               </div>
-              <div class="rows">
+              <div class="row">
                 <div class="col-xs-4">
                   <div class="apartaent-card">
                     <article>
@@ -453,7 +591,7 @@
               </div>
             </aside>
           </div>
-        </div>
+        </div><a href="#" class="up"><i class="icon icon-up"></i></a>
       </div>
       <footer class="footer">
         <div class="footer__top">
@@ -500,6 +638,19 @@
           </div>
         </div>
       </footer>
+      <div id="search__history" class="search__history modal">
+        <h2>История поиска</h2><a href="#" rel="modal:close" class="modal-close"><span></span></a>
+        <div class="search__history__content">
+          <div class="search__history__block"><time><i class="icon icon-clock"></i>26 июля 12:03</time><a href="#">2-комнатная квартира 25 000 - 35 000 руб. Санкт-Петербург Красногвардейский район, 15-20 мин пешком от станции метро Новочеркасская </a><a href="#" class="delete"> <i class="icon icon-delete"></i></a></div>
+          <div class="search__history__block"><time><i class="icon icon-clock"></i>26 июля 12:03</time><a href="#">2-комнатная квартира 25 000 - 35 000 руб. Санкт-Петербург Красногвардейский район, 15-20 мин пешком от станции метро Новочеркасская </a><a href="#" class="delete"> <i class="icon icon-delete"></i></a></div>
+          <div class="search__history__block"><time><i class="icon icon-clock"></i>26 июля 12:03</time><a href="#">2-комнатная квартира 25 000 - 35 000 руб. Санкт-Петербург Красногвардейский район, 15-20 мин пешком от станции метро Новочеркасская </a><a href="#" class="delete"> <i class="icon icon-delete"></i></a></div>
+          <div class="search__history__block"><time><i class="icon icon-clock"></i>26 июля 12:03</time><a href="#">2-комнатная квартира 25 000 - 35 000 руб. Санкт-Петербург Красногвардейский район, 15-20 мин пешком от станции метро Новочеркасская </a><a href="#" class="delete"> <i class="icon icon-delete"></i></a></div>
+          <div class="search__history__block"><time><i class="icon icon-clock"></i>26 июля 12:03</time><a href="#">2-комнатная квартира 25 000 - 35 000 руб. Санкт-Петербург Красногвардейский район, 15-20 мин пешком от станции метро Новочеркасская </a><a href="#" class="delete"> <i class="icon icon-delete"></i></a></div>
+          <div class="search__history__block"><time><i class="icon icon-clock"></i>26 июля 12:03</time><a href="#">2-комнатная квартира 25 000 - 35 000 руб. Санкт-Петербург Красногвардейский район, 15-20 мин пешком от станции метро Новочеркасская </a><a href="#" class="delete"> <i class="icon icon-delete"></i></a></div>
+          <div class="search__history__block"><time><i class="icon icon-clock"></i>26 июля 12:03</time><a href="#">2-комнатная квартира 25 000 - 35 000 руб. Санкт-Петербург Красногвардейский район, 15-20 мин пешком от станции метро Новочеркасская </a><a href="#" class="delete"> <i class="icon icon-delete"></i></a></div>
+        </div>
+        <div class="search__history__btn"><a href="#" class="btn btn-primary">Очистить историю</a></div>
+      </div>
     </div>
     <!--END out-->
     <!--LOAD SCRIPTS-->

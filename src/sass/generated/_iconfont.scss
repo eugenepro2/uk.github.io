@@ -9,21 +9,42 @@
   font-style: normal;
 }
 
-$icon-arrow-down-shaded: "\EA01";
-$icon-arrow-down: "\EA02";
-$icon-arrow-left: "\EA03";
-$icon-arrow-right: "\EA04";
-$icon-burger: "\EA05";
-$icon-clock: "\EA06";
-$icon-development: "\EA07";
-$icon-heart: "\EA08";
-$icon-location: "\EA09";
-$icon-menu: "\EA0A";
-$icon-plus: "\EA0B";
-$icon-rub: "\EA0C";
-$icon-search: "\EA0D";
-$icon-up: "\EA0E";
-$icon-view: "\EA0F";
+$icon-all: "\EA01";
+$icon-armchair: "\EA02";
+$icon-arrow-down-shaded: "\EA03";
+$icon-arrow-down: "\EA04";
+$icon-arrow-left: "\EA05";
+$icon-arrow-right: "\EA06";
+$icon-bath: "\EA07";
+$icon-bed: "\EA08";
+$icon-burger: "\EA09";
+$icon-chair: "\EA0A";
+$icon-clock: "\EA0B";
+$icon-close: "\EA0C";
+$icon-couch: "\EA0D";
+$icon-cupboard: "\EA0E";
+$icon-delete: "\EA0F";
+$icon-development: "\EA10";
+$icon-douche: "\EA11";
+$icon-hairdryer: "\EA12";
+$icon-heart: "\EA13";
+$icon-iron: "\EA14";
+$icon-ironing-board: "\EA15";
+$icon-kettle: "\EA16";
+$icon-location: "\EA17";
+$icon-menu: "\EA18";
+$icon-microwave: "\EA19";
+$icon-plus: "\EA1A";
+$icon-refrigerator: "\EA1B";
+$icon-rub: "\EA1C";
+$icon-search: "\EA1D";
+$icon-stove: "\EA1E";
+$icon-table: "\EA1F";
+$icon-toilet: "\EA20";
+$icon-tv: "\EA21";
+$icon-up: "\EA22";
+$icon-view: "\EA23";
+$icon-washer: "\EA24";
 
 
 %icon {
@@ -42,18 +63,39 @@ $icon-view: "\EA0F";
   display: inline-block;
 }
 
+.icon-all:before { content: $icon-all; }
+.icon-armchair:before { content: $icon-armchair; }
 .icon-arrow-down-shaded:before { content: $icon-arrow-down-shaded; }
 .icon-arrow-down:before { content: $icon-arrow-down; }
 .icon-arrow-left:before { content: $icon-arrow-left; }
 .icon-arrow-right:before { content: $icon-arrow-right; }
+.icon-bath:before { content: $icon-bath; }
+.icon-bed:before { content: $icon-bed; }
 .icon-burger:before { content: $icon-burger; }
+.icon-chair:before { content: $icon-chair; }
 .icon-clock:before { content: $icon-clock; }
+.icon-close:before { content: $icon-close; }
+.icon-couch:before { content: $icon-couch; }
+.icon-cupboard:before { content: $icon-cupboard; }
+.icon-delete:before { content: $icon-delete; }
 .icon-development:before { content: $icon-development; }
+.icon-douche:before { content: $icon-douche; }
+.icon-hairdryer:before { content: $icon-hairdryer; }
 .icon-heart:before { content: $icon-heart; }
+.icon-iron:before { content: $icon-iron; }
+.icon-ironing-board:before { content: $icon-ironing-board; }
+.icon-kettle:before { content: $icon-kettle; }
 .icon-location:before { content: $icon-location; }
 .icon-menu:before { content: $icon-menu; }
+.icon-microwave:before { content: $icon-microwave; }
 .icon-plus:before { content: $icon-plus; }
+.icon-refrigerator:before { content: $icon-refrigerator; }
 .icon-rub:before { content: $icon-rub; }
 .icon-search:before { content: $icon-search; }
+.icon-stove:before { content: $icon-stove; }
+.icon-table:before { content: $icon-table; }
+.icon-toilet:before { content: $icon-toilet; }
+.icon-tv:before { content: $icon-tv; }
 .icon-up:before { content: $icon-up; }
 .icon-view:before { content: $icon-view; }
+.icon-washer:before { content: $icon-washer; }
